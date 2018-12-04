@@ -23,18 +23,16 @@ body {
 }
 
 /* Buttons */
-#loginButton, #signUpButton, #changePass, #logout, #create, #upload, #create2, #upload2 {
+.modalbuttons, #loginButton, #signUpButton, #changePass, #logout, #create, #upload, #create2, #upload2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
-}
-button {
   border-radius: 5px;
 }
 
-/* Login Buttons */
-.login {
+/* Input Text */
+.input {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -67,7 +65,8 @@ button {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%;
+    max-width: 50%;
+    text-align: center;
 }
 
 #header {
@@ -76,7 +75,7 @@ button {
 #corner {
   float: left;
 }
-#libheader {
+#libheader, #uploadHeader {
   text-align: center;
 }
 #emptylibrary {
@@ -84,7 +83,7 @@ button {
   text-align: center;
 }
 #library {
-  background-color: red;
+  visibility: hidden;
   text-align: center;
 }
 .botbutton {

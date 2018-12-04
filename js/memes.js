@@ -1,0 +1,2 @@
+var memes = {};
+var uploads = {};

@@ -25,7 +25,7 @@
       <h1 class="libraryHeader">uWu ~ You don't have any memes right now ~ uWu</h1>
       <button id="create" type="button">Create Your Own</button>
       <br />
-      <button id="upload" type="button">Upload / Import</button>
+      <input type="file" id="meme" name="meme" accept="image/png, image/jpeg" value="Upload Your Own">
     </div>
 
     <div id="library">
@@ -34,6 +34,70 @@
       </div>
       <div class="botbutton">
         <button id="upload2" type="button">Upload / Import</button>
+      </div>
+    </div>
+
+    <div id="cuModal" class="modal">
+      <div class="modal-content">
+        <img id="preview" src="img/default.jpg" alt="Your Meme">
+        <hr />
+
+        <div class="botbutton">
+          <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
+        <div class="botbutton">
+          <button id="cuupload" type="button">Upload Image</button>
+        </div>
+
+        <br />
+        <label for="title">Title:</label>
+        <input class="input" type="text" name="title" placeholder="Meme Title">
+        <br />
+        <label for="toptext">Top Text:</label>
+        <input class="input" type="text" name="toptext" placeholder="Top Text">
+        <br />
+        <label for="bottomtext">Bottom Text:</label>
+        <input class="input" type="text" name="bottomtext" placeholder="Bottom Text">
+        <br />
+        <label for="tags">Tags:</label>
+        <input class="input" type="text" name="tags" placeholder="Tag">
+        <br />
+
+        <div class="botbutton">
+          <button class="modalbuttons" id="cuconfirm" type="button">Create / Update</button>
+        </div>
+        <div class="botbutton">
+          <button class="modalbuttons" id="cucancel" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="uploadModal" class="modal">
+      <div class="modal-content">
+        <h1 id="uploadHeader">Upload</h1>
+        <div class="botbutton">
+          <button class="modalbuttons" id="uploadconfirm" type="button">Upload</button>
+        </div>
+        <div class="botbutton">
+          <button class="modalbuttons" id="uploadcancel" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="shareModal" class="modal">
+      <div class="modal-content">
+        <h1 id="shareHeader" class="modalHeader">Share This Meme</h1>
+        <div class="botbutton">
+          <button class="modalbuttons" id="shareconfirm" type="button">Share</button>
+        </div>
+        <div class="botbutton">
+          <button class="modalbuttons" id="sharecancel" type="button">Cancel</button>
+        </div>
       </div>
     </div>
 

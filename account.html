@@ -17,6 +17,25 @@
     <button id="changePass" type="button">Change Password</button>
     <br />
     <button id="logout" type="button">Log Out</button>
+
+    <div id="pwModal" class="modal">
+      <div class="modal-content">
+        <h1 id="changepass">Change Password</h1>
+        <input class="input" type="text" name="ogpass" placeholder="Current Password">
+        <br />
+        <input class="input" type="text" name="newpassword" placeholder="New Password">
+        <br>
+        <input class="input" type="text" name="confirmpassword" placeholder="Confirm New Password">
+        <br>
+        <div class="botbutton">
+          <button class="modalbuttons" id="passwordconfirm" type="button">Change Password</button>
+        </div>
+        <div class="botbutton">
+          <button class="modalbuttons" id="passwordcancel" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
     <script src="js/account.js"></script>
   </body>
 </html>
