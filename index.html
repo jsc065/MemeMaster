@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="author" content="Justin Chen">
-    <link rel="shortcut icon" href="img/Troll Face.ico">
+    <link rel="shortcut icon" href="img/Troll_Face.ico">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-
+    <link rel="stylesheet" href="css/mememaster.css" type="text/css">
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     <script>
       // Initialize Firebase
@@ -26,25 +26,29 @@
   <body>
     <img id="logo" src="img/logo.png" alt="MemeMaster">
     <div id="existinguser">
-      <h1>Sign In</h1>
+      <h1 id="signinheader">Sign In</h1>
       <input id="email" class="input" type="text" name="email" placeholder="E-Mail">
       <br />
       <input id="password" class="input" type="text" name="password" placeholder="Password">
       <br />
-      <button id="signin">Sign In</button>
+      <div id="frontbuttons">
+        <button id="signin">Sign In</button>
+        <button id="newaccount">Sign Up</button>
+      </div>
     </div>
 
-    <hr />
-
-    <div id="newuser">
-      <h1>Sign Up</h1>
-      <input id="signupemail" class="input" type="text" name="signupemail" placeholder="E-Mail">
-      <br />
-      <input id="signuppassword" class="input" type="text" name="signuppassword" placeholder="Password">
-      <br />
-      <input id="signupconfirm" class="input" type="text" name="signupconfirm" placeholder="Confirm Password">
-      <br />
-      <button id="signup">Sign Up</button>
+    <div id="myModal" class="modal">
+      <div id="newuser" class="modal-content">
+        <h1>Sign Up</h1>
+        <input id="signupemail" class="input" type="text" name="signupemail" placeholder="E-Mail">
+        <br />
+        <input id="signuppassword" class="input" type="text" name="signuppassword" placeholder="Password">
+        <br />
+        <input id="signupconfirm" class="input" type="text" name="signupconfirm" placeholder="Confirm Password">
+        <br />
+        <button id="signup">Sign Up</button>
+        <p id="signupcancel">Cancel</p>
+      </div>
     </div>
 
     <script src="js/index.js"></script>

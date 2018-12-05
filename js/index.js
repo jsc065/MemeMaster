@@ -61,6 +61,15 @@ function handleSignUp() {
   });
 }
 
+function signUpModal() {
+  console.log('TEST');
+  document.getElementById('myModal').style.display = 'block';
+
+  document.getElementById('signupcancel').addEventListener('click', function() {
+    document.getElementById('myModal').style.display = 'none';
+  });
+}
+
 function initApp() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -73,6 +82,7 @@ function initApp() {
   });
   document.getElementById('signin').addEventListener('click', toggleSignIn);
   document.getElementById('signup').addEventListener('click', handleSignUp);
+  document.getElementById('newaccount').addEventListener('click', signUpModal);
 }
 
 window.onload = function() {

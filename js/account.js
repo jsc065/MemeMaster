@@ -1,12 +1,48 @@
 function passwordModal() {
-  $('#pwModal').css('display', 'block');
-  $('#passwordconfirm').click(function() {
-    $('#pwModal').css('display', 'none');
+  document.getElementById('pwModal').style.display = 'block';
+
+  document.getElementById('passwordconfirm').addEventListener('click', function() {
+    var user = firebase.auth().currentUser;
+    var newPassword = document.getElementById('newpassword').value;
+    var confirmPassword = document.getElementById('confirmpassword').value;
+
+    if (newPassword == confirmPassword) {
+      user.updatePassword(newPassword).then(function() {
+        document.location.href = '../account.html';
+      });
+    } else {
+      alert('Passwords do not match.');
+      return;
+    }
   });
-  $('#passwordcancel').click(function() {
-    $('#pwModal').css('display', 'none');
+
+  document.getElementById('passwordcancel').addEventListener('click', function() {
+    document.getElementById('pwModal').style.display = 'none';
   });
 }
-$('#changePass').click(function() {
-  passwordModal();
-});
+
+function handleSignOut() {
+  firebase.auth().signOut().then(function() {
+    document.location.href = '../index.html';
+  });
+}
+
+function initApp() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      var displayName = user.displayName;
+      var email = user.email;
+      var photoURL = user.photoURL;
+      var uid = user.uid;
+      var providerData = user.providerData;
+    } else {
+      document.location.href = '../index.html';
+    }
+  });
+  document.getElementById('changePass').addEventListener('click', passwordModal);
+  document.getElementById('logout').addEventListener('click', handleSignOut);
+}
+
+window.onload = function() {
+  initApp();
+};

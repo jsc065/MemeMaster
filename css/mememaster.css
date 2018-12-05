@@ -39,7 +39,7 @@ body {
 }
 
 /* Sign Up and Cancel Links */
-#signup, #cancel {
+#signupcancel {
   text-align: center;
   color: blue;
   text-decoration: underline;
@@ -74,7 +74,7 @@ body {
 #corner {
   float: left;
 }
-#libheader, #uploadHeader {
+#libheader, #uploadHeader, #signinheader {
   text-align: center;
 }
 #emptylibrary {
@@ -87,4 +87,7 @@ body {
 }
 .botbutton {
   display: inline-block;
-}**/
+}
+#frontbuttons {
+  text-align: center;
+}
