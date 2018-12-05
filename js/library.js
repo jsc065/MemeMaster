@@ -1,28 +1,17 @@
-$('#cornerPic').click(function() {
-  window.location.href="account.html";
-});
-function uploadModal() {
-  $('#uploadModal').css('display', 'block');
-  $('#uploadconfirm').click(function() {
-    $('#uploadModal').css('display', 'none');
-  });
-  $('#uploadcancel').click(function() {
-    $('#uploadModal').css('display', 'none');
+function initApp() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      var displayName = user.displayName;
+      var email = user.email;
+      var photoURL = user.photoURL;
+      var uid = user.uid;
+      var providerData = user.providerData;
+    } else {
+      document.location.href = '../index.html';
+    }
   });
 }
-$('#upload, #upload2').click(function() {
-  uploadModal();
-});
 
-function cuModal() {
-  $('#cuModal').css('display', 'block');
-  $('#cuconfirm').click(function() {
-    $('#cuModal').css('display', 'none');
-  });
-  $('#cucancel').click(function() {
-    $('#cuModal').css('display', 'none');
-  });
-}
-$('#create').click(function() {
-  cuModal();
-});
+window.onload = function() {
+  initApp();
+};

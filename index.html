@@ -7,39 +7,44 @@
     <meta name="author" content="Justin Chen">
     <link rel="shortcut icon" href="img/Troll Face.ico">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="css/mememaster.css" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDJeEr95SE67awCTuf9xpg_v3o-XGZ-fd0",
+        authDomain: "mememaster-cse134b-hw-6.firebaseapp.com",
+        databaseURL: "https://mememaster-cse134b-hw-6.firebaseio.com",
+        projectId: "mememaster-cse134b-hw-6",
+        storageBucket: "mememaster-cse134b-hw-6.appspot.com",
+        messagingSenderId: "271110128623"
+      };
+      firebase.initializeApp(config);
+    </script>
   </head>
 
   <body>
     <img id="logo" src="img/logo.png" alt="MemeMaster">
-
-    <form>
-      <input class="input" type="text" name="username" placeholder="Username">
+    <div id="existinguser">
+      <h1>Sign In</h1>
+      <input id="email" class="input" type="text" name="email" placeholder="E-Mail">
       <br />
-      <input class="input" type="text" name="password" placeholder="Password">
-      <br>
-      <!--<input id="loginButton" type="submit" value="Login">-->
-      <button id="loginButton" type="button">Log In</button>
-    </form>
+      <input id="password" class="input" type="text" name="password" placeholder="Password">
+      <br />
+      <button id="signin">Sign In</button>
+    </div>
 
-    <p id="signup">Don't have an account? Sign up.</p>
+    <hr />
 
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <h1 id="createacc">Create Account</h1>
-        <form>
-          <input class="input" type="text" name="username" placeholder="Username">
-          <br />
-          <input class="input" type="email" name="email" placeholder="E-Mail">
-          <br>
-          <input class="input" type="text" name="password" placeholder="Password">
-          <br>
-          <!--<input id="signUpButton" type="submit" value="Sign Up">-->
-          <button id="signUpButton" type="button">Sign Up</button>
-          <p id="cancel">Cancel</p>
-        </form>
-      </div>
+    <div id="newuser">
+      <h1>Sign Up</h1>
+      <input id="signupemail" class="input" type="text" name="signupemail" placeholder="E-Mail">
+      <br />
+      <input id="signuppassword" class="input" type="text" name="signuppassword" placeholder="Password">
+      <br />
+      <input id="signupconfirm" class="input" type="text" name="signupconfirm" placeholder="Confirm Password">
+      <br />
+      <button id="signup">Sign Up</button>
     </div>
 
     <script src="js/index.js"></script>
