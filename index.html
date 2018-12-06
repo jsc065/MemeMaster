@@ -20,6 +20,9 @@
         messagingSenderId: "271110128623"
       };
       firebase.initializeApp(config);
+
+      var database = firebase.database();
+      var storage = firebase.storage();
     </script>
   </head>
 
@@ -29,7 +32,7 @@
       <h1 id="signinheader">Sign In</h1>
       <input id="email" class="input" type="text" name="email" placeholder="E-Mail">
       <br />
-      <input id="password" class="input" type="text" name="password" placeholder="Password">
+      <input id="password" class="input" type="password" name="password" placeholder="Password">
       <br />
       <div id="frontbuttons">
         <button id="signin">Sign In</button>

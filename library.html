@@ -21,6 +21,9 @@
         messagingSenderId: "271110128623"
       };
       firebase.initializeApp(config);
+
+      var database = firebase.database();
+      var storage = firebase.storage();
     </script>
   </head>
 
@@ -38,7 +41,9 @@
       <h1 class="libraryHeader">uWu ~ You don't have any memes right now ~ uWu</h1>
       <button id="create" type="button">Create Your Own</button>
       <br />
-      <input type="file" id="meme" name="meme" accept="image/png, image/jpeg" value="Upload Your Own">
+      <button id="test" type="button">test</button>
+      <br />
+      <input type="file" id="upload1" name="meme" accept="image/png, image/jpeg">
     </div>
 
     <div id="library">
@@ -52,18 +57,17 @@
 
     <div id="cuModal" class="modal">
       <div class="modal-content">
-        <img id="preview" src="img/default.jpg" alt="Your Meme">
+        <img id="preview" alt="Your Meme">
         <hr />
 
         <div class="botbutton">
-          <select>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+          <select id="template">
+            <option value="successkid">Success Kid</option>
+            <option value="asiandad">Asian Dad</option>
           </select>
         </div>
         <div class="botbutton">
+          <input type="file" id="upload3" name="meme3" accept="image/png, image/jpeg">
           <button id="cuupload" type="button">Upload Image</button>
         </div>
 
