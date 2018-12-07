@@ -85,12 +85,9 @@ body {
   margin-top: 5em;
   text-align: center;
 }
-#library {
-  visibility: hidden;
-  text-align: center;
-}
 .botbutton {
   display: inline-block;
+  margin-bottom: 15px;
 }
 #frontbuttons {
   text-align: center;
@@ -99,4 +96,20 @@ body {
 #preview {
   width: 400px;
   height: 250px;
+}
+.meme {
+  width: 400px;
+  height: 250px;
+  max-height: 250px;
+  max-width: 400px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.image {
+  max-height: inherit;
+  max-width: inherit;
+}
+.dllink {
+  float: right;
 }
