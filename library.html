@@ -30,7 +30,10 @@
   <body>
     <div id="header">
       <div id="corner">
-        <a id="cornerPic" href="account.html">Your Account</a>
+        <a href="account.html">
+          <img id="cornerPic" src="img/default.JPG" height="100" width="100">
+        </a>
+        <!--<a id="cornerPic" href="account.html">Your Account</a>-->
       </div>
       <div id="libheader">
         <h1 class="libraryHeader">Memebrary</h1>
@@ -45,35 +48,40 @@
       <br />
       <div id="library">
       </div>
+      <br />
     </div>
 
     <div id="cuModal" class="modal">
       <div class="modal-content">
-        <img id="preview" alt="Your Meme">
+        <img id="preview" alt="Your Meme" src="">
         <hr />
 
-        <div class="botbutton">
+        <!--<div class="botbutton">
           <select id="template">
             <option value="successkid">Success Kid</option>
             <option value="asiandad">Asian Dad</option>
           </select>
-        </div>
+        </div>-->
         <div class="botbutton">
           <input type="file" id="upload3" name="meme3" accept="image/png, image/jpeg">
+        </div>
+        <div class="botbutton">
+          <label for="noedit">Already a meme?</label>
+          <input title="Please check this box if this is a full meme" type="checkbox" id="noedit" name="noedit">
         </div>
 
         <br />
         <label for="title">Title:</label>
-        <input class="input" type="text" name="title" placeholder="Meme Title">
+        <input class="input" type="text" id="title" name="title" placeholder="Meme Title">
         <br />
         <label for="toptext">Top Text:</label>
-        <input class="input" type="text" name="toptext" placeholder="Top Text">
+        <input class="input" type="text" id="toptext" name="toptext" placeholder="Top Text">
         <br />
         <label for="bottomtext">Bottom Text:</label>
-        <input class="input" type="text" name="bottomtext" placeholder="Bottom Text">
+        <input class="input" type="text" id="bottomtext" name="bottomtext" placeholder="Bottom Text">
         <br />
         <label for="tags">Tags:</label>
-        <input class="input" type="text" name="tags" placeholder="Tag">
+        <input class="input" type="text" id="tags" name="tags" placeholder="Tag">
         <br />
 
         <div class="botbutton">

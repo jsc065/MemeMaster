@@ -1,3 +1,4 @@
+// Toggles sign in along with alerts and error.
 function toggleSignIn() {
   if (firebase.auth().currentUser) {
     firebase.auth().signOut();
@@ -31,6 +32,7 @@ function toggleSignIn() {
   }
 }
 
+// Handles sign up. Checks password and email requirements
 function handleSignUp() {
   var email = document.getElementById('signupemail').value;
   var password = document.getElementById('signuppassword').value;
@@ -61,6 +63,7 @@ function handleSignUp() {
   });
 }
 
+// Toggle Sign up modal
 function signUpModal() {
   console.log('TEST');
   document.getElementById('myModal').style.display = 'block';
@@ -70,6 +73,7 @@ function signUpModal() {
   });
 }
 
+// Initialize app and buttons
 function initApp() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {

@@ -1,3 +1,4 @@
+// Toggles password modal to change password
 function passwordModal() {
   document.getElementById('pwModal').style.display = 'block';
 
@@ -21,12 +22,14 @@ function passwordModal() {
   });
 }
 
+// Sends user back to login at signout
 function handleSignOut() {
   firebase.auth().signOut().then(function() {
     document.location.href = '../index.html';
   });
 }
 
+// Initialize app
 function initApp() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
