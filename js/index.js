@@ -34,6 +34,8 @@ function toggleSignIn() {
 
 // Handles sign up. Checks password and email requirements
 function handleSignUp() {
+  document.getElementById('myModal').style.display = 'none';
+
   var email = document.getElementById('signupemail').value;
   var password = document.getElementById('signuppassword').value;
   var confirm = document.getElementById('signupconfirm').value;
